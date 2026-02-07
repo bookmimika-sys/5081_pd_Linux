@@ -1,0 +1,12 @@
+1. cd
+2. echo -e ">GENE1\nATCGTACGTACGATCGATCGA\n>GENE2\nCGTACGATCAGCATCAGC\n>GENE3\nATCGTACGTACGGGGGGATCGA\n>GENE4\nGGGATCATCGACGATC\n>GENE5\nATGCGTACGTACGATCG\n>GENE6\nGATCAGCGGATCGATCG\n>GENE7\nCGTACGTACAGCATCGTACG" > ~/sekwencje_genowe.txt
+3. cat sekwencje_genowe.txt
+4. grep "^>" sekwencje_genowe.txt
+5. grep -v "ATCG" sekwencje_genowe.txt
+6. grep "^CGTACG" sekwencje_genowe.txt
+7. grep "[0-9]" sekwencje_genowe.txt
+8. grep -r 'ATG' 
+
+
+
+

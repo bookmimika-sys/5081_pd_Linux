@@ -1,0 +1,9 @@
+1. ls
+2. mkdir test_katalog
+3. cd test_katalog
+4. mkdir katalog1 katalog2 katalog3
+5. ls
+6. mv katalog1 ..
+7. rmdir katalog2
+8. cd
+9. mkdir "Moje katalogi"

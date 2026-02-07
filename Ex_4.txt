@@ -1,0 +1,14 @@
+1. cd
+2. cd "Moje katalogi"
+3. echo "To jest zawartosc pliku" > plik.txt
+4. ln plik.txt plik_twardy.txt
+5. ls
+6. mv plik.txt ..
+7. cat plik_twardy.txt
+8. ln -s ../plik.txt link_symboliczny.txt
+9. ls
+10. rm ../plik.txt
+11 ls   //link stał sie czerwony
+
+
+

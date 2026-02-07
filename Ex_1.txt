@@ -1,0 +1,19 @@
+1. vi plik_vi.txt
+2. w konsoli przełaczyłam sie na wpisywanie po uzyciu i
+3. wpisalam tekst
+4. Esc, :wq
+5. otworzyłam znowu plik: vi plik_vi.txt
+6. Esc, :%s/Bioinformatyka to przyszlosc/Bioinformatyka zmienia swiat/ 
+7. :wq
+8. otworzyłam znowu plik: vi plik_vi.txt
+9. :set number
+10. yy, G, p
+11. :wq
+12. nano plik_nano.txt
+13. Wpisałam tekst
+14. Ctrl + O, Ctrl + X
+15. nano plik_nano.txt
+16. Ctrl + W, Ctrl + R zmiana tekstu
+17. Ctrl + O, Ctrl + X
+18. nano -l plik_nano.txt
+

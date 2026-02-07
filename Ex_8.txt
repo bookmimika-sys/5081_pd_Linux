@@ -1,0 +1,8 @@
+1. echo -e "Kurs Bioinformatyka\nAnaliza danych\nProgramowanie w Pythonie\nWykorzystanie narzędzi\nZastosowania w biologii\n" > przykladowe_dane.txt
+2. cat przykladowe_dane.txt
+3. head -n 3 przykladowe_dane.txt
+4. grep -v '^$' przykladowe_dane.txt | tail -n 2
+5. wc przykladowe_dane.txt
+
+
+

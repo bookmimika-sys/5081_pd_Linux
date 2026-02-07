@@ -1,0 +1,12 @@
+1. cd
+2. touch zapiski.txt
+3. cp notatki.txt Desktop/git/5081_pd_Linux/test_katalog/katalog3/
+4. find -name notatki.txt
+5. cp notatki.txt Desktop/git/5081_pd_Linux/test_katalog/katalog3/notatki_kopia.txt
+6. cd Desktop/git/5081_pd_Linux/test_katalog/katalog3
+7. ls -lh
+8. mv notatki.txt zapiski.txt
+9. ls -lt
+
+
+

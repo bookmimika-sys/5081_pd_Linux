@@ -1,0 +1,8 @@
+1. echo -e "Ala\nKot\nPies\nAla\nPies\nZebra\nZebra\n" > przykladowe_dane2.txt
+2. sort przykladowe_dane2.txt > posortowane_dane.txt
+3. uniq posortowane_dane.txt > posortowane_dane_bez_duplikatow.txt
+4. cat posortowane_dane_bez_duplikatow.txt
+
+
+
+

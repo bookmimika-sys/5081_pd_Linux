@@ -1,0 +1,12 @@
+1. cd
+2. echo "Bioinformatyka to interdyscyplinarna dziedzina nauki." > dane.txt
+echo "Bioinformatyka łączy informatykę i biologię." >> dane.txt
+echo "W bioinformatyce analiza danych biologicznych odgrywa kluczową rolę." >> dane.txt
+echo "To jest komentarz, który nie będzie usunięty." >> dane.txt
+3. sed 's/Bioinformatyka/Informatyka/g' dane.txt
+4. sed '/komentarz/d' dane.txt
+5. sed -n '1,3p' dane.txt
+6. sed -i 's/a/e/g' dane.txt
+
+
+

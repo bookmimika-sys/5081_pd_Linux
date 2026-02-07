@@ -1,0 +1,14 @@
+1. cd
+2. touch plik_do_archiwizacji.txt
+3. mkdir katalog_do_archiwizacji
+4. cp plik_do_archiwizacji.txt katalog_do_archiwizacji/
+5. ls katalog_do_archiwizacji
+6. tar -cvf archiwum.tar katalog_do_archiwizacji/plik_do_archiwizacji.txt
+7. tar -tvf archiwum.tar
+8. gzip archiwum.tar
+9. ls
+10. gunzip archiwum.tar.gz
+11. tar -tvf archiwum.tar
+
+
+
