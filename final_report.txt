@@ -1,0 +1,60 @@
+-- Sekcja 1 - przygotowanie srodowiska
+1. mkdir projekt_bioinfo
+2. sudo groupadd bio_grupa
+3. sudo usermod -aG biogrupa $USER
+4. sudo chown :bio_grupa projekt_bioinfo
+5. chmod 770 projekt_bioinfo
+-- Sekcja 2 - pobrałam pliki
+-- Sekcja 3
+Przeszukałam dane i zeby pobrac wprost przez wget musiałam wziac id NC_* (brałam pierwszy z tabelki genomic context). Pliki sa bardzo duze.
+6. wget -O sekwencja_3630.fasta "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_000011.10&rettype=fasta"
+7. wget -O sekwencja_397415.fasta "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_010444.4&rettype=fasta"
+8. wget -O sekwencja_483665.fasta "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_051822.1&rettype=fasta"
+9. wget -O sekwencja_493804.fasta "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_058377.1&rettype=fasta"
+-- Sekcja 4
+10. sed -i 's/^>.*/>INS_human/' sekwencja_3630.fasta
+11. sed -i 's/^>.*/>INS_pig/' sekwencja_397415.fasta
+12. sed -i 's/^>.*/>INS_dog/' sekwencja_483665.fasta
+13. sed -i 's/^>.*/>INS_cat/' sekwencja_493804.fasta
+14. cat sekwencja_*.fasta > INS_multifasta.fa
+-- Sekcja 5
+15. grep 'ACTG' INS_multifasta.fa > motyw_ACTG.txt
+-- Sekcja 6
+16. grep -o 'ACTG' motyw_ACTG.txt | wc -l (liczy wszystkie wystapienia - dzieli linie zawierajace actg)
+17. cat motyw_ACTG.txt | wc -l (liczy wszystkie linie)
+-- Sekcja 7 - stworzyłam script.sh i go wyprobowalam
+------------------------
+#!/bin/bash
+
+FASTA_FILE="human_script.fasta"
+ACTG_FILE="human_ACTG.txt"
+
+wget -O $FASTA_FILE "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_000011.10&rettype=fasta"
+
+echo "Pobrano!"
+
+sed -i "s/^>.*/>INS_human/" $FASTA_FILE
+
+grep 'ACTG' $FASTA_FILE > $ACTG_FILE
+
+wystapienia_ACTG=$(grep -o 'ACTG' $ACTG_FILE | wc -l)
+
+echo "Zakonczono! Wystapienia ACTG: $wystapienia_ACTG"
+---------------------
+
+18. chmod +x script.sh
+19. ./script.sh
+-- Sekcja 8
+20. ln -s ../projekt_bioinfo link_projekt_bioinfo
+21. ln INS_multifasta.fa INS_multifasta_hardlink.fa
+22. ls
+-- Sekcja 9
+23. cd
+24. tar -czvf projekt_bioinfo.tar.gz projekt_bioinfo
+-- Sekcja 10
+25. scp projekt_bioinfo.tar.gz pd5081@msh.pjwstk.edu.pl:/home/PJWSTK/pd5081 (niestety proba jest nieudana )
+
+
+
+
+
