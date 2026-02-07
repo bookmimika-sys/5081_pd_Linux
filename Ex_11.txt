@@ -1,0 +1,11 @@
+1. ls plik_tekstowy.txt
+2. mkdir nowy_katalog && cd nowy_katalog
+3. echo 'Witaj' ; ls
+4. sleep 10 &
+
+
+
+
+
+
+
